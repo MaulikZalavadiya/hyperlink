@@ -1,0 +1,22 @@
+{% block content %}
+        <h2>List of Coupons</h2>
+        <br>
+            <table border="1px solid black">
+                <tr>
+                    <th>Coupon Code</th>
+                    <th>Start Date</th>
+                    <th>End Date</th>
+                    <th>Discount</th>
+                </tr>
+                {% for coupon in coupon %}
+                <tr>
+                    <td>{{coupon.coupon_code}}</td>
+                    <td>{{coupon.start_date}}</td>
+                    <td>{{coupon.end_date}}</td>
+                    <td>{{coupon.discount}}</td>
+                    </td>
+                </tr>
+                {% endfor %}
+            </table>
+<br>
+{% endblock %}

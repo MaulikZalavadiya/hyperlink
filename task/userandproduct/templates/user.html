@@ -1,0 +1,17 @@
+<table>
+    <tr>
+        <th>Coupon Code</th>
+    </tr>
+    {% for coupon in coupon_code %}
+    <tr>
+        <td>{{coupon.coupon_code}}</td>
+    </tr>
+    {% endfor %}
+
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{form.as_table}}
+        <input type="submit" value="apply promocode">
+    </form>
+</table>
